@@ -33,14 +33,14 @@ if st.button("Cast Spell :crystal_ball:"):
 
     # Define a list of answers for the soothsayer to randomly choose from
     answers = ["It is certain", "Without a doubt", "You may rely on it", "Yes, definitely", "It is decidedly so",
-               "As I see it, yes", "Most likely", "Yes", "Outlook good", "Signs point to"]
+               "As I see it, yes", "Most likely", "Yes", "Signs point to"]
     
     # Randomly choose an answer from the list
     answer = random.choice(answers)
 
         
     # Display the answer and maximum value
-    st.write(f"Yes spirits, oh.. **{answer}**!!🔮🧙‍♀️✨")
+    st.write(f"spirits are talking........, oh....... **{answer}**!!🔮🧙‍♀️✨")
     #st.write("<h1 style='text-align:center; color:#008080;'>The largest number is:</h1>", unsafe_allow_html=True)
     
     # display the largest number in a big font size
