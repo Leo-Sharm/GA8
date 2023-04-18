@@ -58,5 +58,4 @@ if st.button("Find the Largest Number :mag_right:"):
 
         # add a gif
         st.markdown("![gif](https://media.giphy.com/media/h8HmN0UcEKR0xWnv3R/giphy.gif)")
-    else:
         st.error("Please enter all three numbers.")
