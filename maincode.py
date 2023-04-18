@@ -11,9 +11,7 @@ def find_maximum(num1, num2, num3):
 # Define the title and introduction text
 st.title("Welcome to the Megamagicia")
 st.subheader("🧙‍♀️ What do you seek to find, my dear?")
-st.write("I know you want to know the greatest of all.
-hihihi..
-give me 3 numbers")
+st.write("I know you want to know the greatest of all.hihihi..give me 3 numbers")
 
 # Define the input fields for the three numbers
 num1 = st.number_input("Enter the first number :", value=0.0, step=None, format='%f', key='num1')
