@@ -1,61 +1,47 @@
 import streamlit as st
+from PIL import Image
+import random
 
-def find_largest(num1, num2, num3):
-    if num1 > num2 and num1 > num3:
-        return num1
-    elif num2 > num1 and num2 > num3:
-        return num2
-    else:
-        return num3
+st.set_page_config(page_title="Soothsayer", page_icon=":crystal_ball:")
 
-# Set page configuration
-st.set_page_config(
-    page_title="Find the Largest Number",
-    page_icon=":mag:",
-    layout="wide"
-)
+# Define a function to find the maximum of three numbers
+def find_maximum(num1, num2, num3):
+    return max(num1, num2, num3)
 
-# Set page layout
-st.markdown("""
-<style>
-    .stButton>button {
-        background-color: #008080;
-        color: white;
-        font-weight: bold;
-        font-size: 16px;
-        padding: 8px 12px;
-        border-radius: 4px;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    .stTextInput>div>div>input {
-        font-size: 16px !important;
-        font-weight: bold;
-        padding: 8px 12px !important;
-        border-radius: 4px !important;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) !important;
-    }
-</style>
-""", unsafe_allow_html=True)
+# Define the title and introduction text
+st.title("Welcome to the Soothsayer")
+st.subheader("Ask a question and I'll give you an answer")
+st.write("Enter three numbers to find the maximum value. The maximum value will determine the answer to your question.")
 
-# Add title and subtitle
-st.title("Find the Largest Number")
-st.markdown("Enter three numbers to find the largest among them. :memo:")
+# Define the input fields for the three numbers
+num1 = st.number_input("Enter the first number (between -100 and 100):", value=0.0, step=None, format='%f', key='num1', min_value=-100, max_value=100)
+num2 = st.number_input("Enter the second number (between -100 and 100):", value=0.0, step=None, format='%f', key='num2', min_value=-100, max_value=100)
+num3 = st.number_input("Enter the third number (between -100 and 100):", value=0.0, step=None, format='%f', key='num3', min_value=-100, max_value=100)
 
-# create three mandatory input fields for the user to enter numbers
-num1 = st.number_input("Enter the first number:", value=0.0, step=None, format='%f', key='num1')
-num2 = st.number_input("Enter the second number:", value=0.0, step=None, format='%f', key='num2')
-num3 = st.number_input("Enter the third number:", value=0.0, step=None, format='%f', key='num3')
+# Define a button to trigger the maximum calculation
+if st.button("Cast Spell"):
+    # Call the function to find the maximum value
+    maximum = find_maximum(num1, num2, num3)
 
-# Add a button to find the largest number
-if st.button("Find the Largest Number :mag_right:"):
-    if num1 is not None and num2 is not None and num3 is not None:
-        # calculate the largest number
-        largest = find_largest(num1, num2, num3)
+    # Define a list of answers for the soothsayer to randomly choose from
+    answers = ["It is certain", "Without a doubt", "You may rely on it", "Yes, definitely", "It is decidedly so",
+               "As I see it, yes", "Most likely", "Yes", "Outlook good", "Signs point to yes",
+               "Reply hazy, try again", "Better not tell you now", "Ask again later", "Cannot predict now",
+               "Concentrate and ask again", "Don't count on it", "Outlook not so good", "My sources say no",
+               "Very doubtful", "My reply is no"]
+    
+    # Randomly choose an answer from the list
+    answer = random.choice(answers)
 
-        # display the largest number in a big font size
-        st.markdown("<h1 style='text-align:center; color:#008080;'>The largest number is:</h1>", unsafe_allow_html=True)
-        st.markdown("<h1 style='text-align:center; color:#008080; font-size: 96px;'>{}</h1>".format(largest), unsafe_allow_html=True)
+    # Display the answer and maximum value
+    st.write(f"The answer to your question is **{answer}**.")
+    st.write(f"The maximum value is **{maximum}**.", unsafe_allow_html=True)
 
-        # add a gif
-        st.markdown("![gif](https://media.giphy.com/media/h8HmN0UcEKR0xWnv3R/giphy.gif)")
-        st.error("Please enter all three numbers.")
+    # Load the GIF image
+    image = Image.open("halloween.gif")
+    # Resize the image to fit alongside the output
+    image_width = int(image.width * 0.7)
+    image_height = int(image.height * 0.7)
+    image = image.resize((image_width, image_height))
+    # Display the GIF image next to the output
+    st.image(image, use_column_width=False, width=300)
