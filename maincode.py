@@ -40,7 +40,7 @@ if st.button("Cast Spell :crystal_ball:"):
 
         
     # Display the answer and maximum value
-    st.write(f"spirits are talking........, oh....... **{answer}**!!🔮🧙‍♀️✨")
+    st.write(f"Calling spirits Toll free... **{answer}**!!🔮🧙‍♀️✨")
     #st.write("<h1 style='text-align:center; color:#008080;'>The largest number is:</h1>", unsafe_allow_html=True)
     
     # display the largest number in a big font size
