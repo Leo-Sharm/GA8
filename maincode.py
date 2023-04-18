@@ -57,6 +57,6 @@ if st.button("Find the Largest Number :mag_right:"):
         st.markdown("<h1 style='text-align:center; color:#008080; font-size: 96px;'>{}</h1>".format(largest), unsafe_allow_html=True)
 
         # add a gif
-        st.markdown("![gif](https://media.giphy.com/media/ZEUODEtQiUgWw/giphy.gif)")
+        st.markdown("![gif](https://media.giphy.com/media/h8HmN0UcEKR0xWnv3R/giphy.gif)")
     else:
         st.error("Please enter all three numbers.")
