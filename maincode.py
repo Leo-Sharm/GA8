@@ -33,10 +33,7 @@ if st.button("Cast Spell :crystal_ball:"):
 
     # Define a list of answers for the soothsayer to randomly choose from
     answers = ["It is certain", "Without a doubt", "You may rely on it", "Yes, definitely", "It is decidedly so",
-               "As I see it, yes", "Most likely", "Yes", "Outlook good", "Signs point to yes",
-               "Reply hazy, try again", "Better not tell you now", "Ask again later", "Cannot predict now",
-               "Concentrate and ask again", "Don't count on it", "Outlook not so good", "My sources say no",
-               "Very doubtful", "My reply is no"]
+               "As I see it, yes", "Most likely", "Yes", "Outlook good", "Signs point to"]
     
     # Randomly choose an answer from the list
     answer = random.choice(answers)
@@ -48,7 +45,7 @@ if st.button("Cast Spell :crystal_ball:"):
    
     # display the largest number in a big font size
     st.markdown("<h1 style='text-align:center; color:#008080;'>The spirits have revealed that the greatest of all is :</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align:center; color:#008080; font-size: 96px;'>{}</h1>".format(answer), unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align:center; color:#008080; font-size: 96px;'>{}</h1>".format(maximum), unsafe_allow_html=True)
     
     
 
