@@ -19,9 +19,17 @@ num2 = st.number_input("Enter the second number :", value=0.0, step=None, format
 num3 = st.number_input("Enter the third number :", value=0.0, step=None, format='%f', key='num3')
 
 # Define a button to trigger the maximum calculation
-if st.button("Cast Spell"):
+if st.button("Cast Spell :crystal_ball:"):
     # Call the function to find the maximum value
     maximum = find_maximum(num1, num2, num3)
+    # Load the GIF image
+    image = Image.open("robin-hood-fortune-teller.gif")
+    # Resize the image to fit alongside the output
+    image_width = int(image.width * 0.7)
+    image_height = int(image.height * 0.7)
+    image = image.resize((image_width, image_height))
+    # Display the GIF image next to the output
+    st.image(image, use_column_width=False, width=300)
 
     # Define a list of answers for the soothsayer to randomly choose from
     answers = ["It is certain", "Without a doubt", "You may rely on it", "Yes, definitely", "It is decidedly so",
@@ -38,13 +46,6 @@ if st.button("Cast Spell"):
     st.write(f"The maximum value is **{maximum}**.", unsafe_allow_html=True)
     
     
-    # Load the GIF image
-    image = Image.open("robin-hood-fortune-teller.gif")
-    # Resize the image to fit alongside the output
-    image_width = int(image.width * 0.7)
-    image_height = int(image.height * 0.7)
-    image = image.resize((image_width, image_height))
-    # Display the GIF image next to the output
-    st.image(image, use_column_width=False, width=300)
+    
 
   
