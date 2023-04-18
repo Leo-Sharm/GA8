@@ -36,5 +36,15 @@ if st.button("Cast Spell"):
     # Display the answer and maximum value
     st.write(f"The answer to your question is **{answer}**.")
     st.write(f"The maximum value is **{maximum}**.", unsafe_allow_html=True)
+    
+    
+    # Load the GIF image
+    image = Image.open("robin-hood-fortune-teller.gif")
+    # Resize the image to fit alongside the output
+    image_width = int(image.width * 0.7)
+    image_height = int(image.height * 0.7)
+    image = image.resize((image_width, image_height))
+    # Display the GIF image next to the output
+    st.image(image, use_column_width=False, width=300)
 
   
