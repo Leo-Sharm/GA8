@@ -2,14 +2,14 @@ import streamlit as st
 from PIL import Image
 import random
 
-st.set_page_config(page_title="Soothsayer", page_icon=":crystal_ball:")
+st.set_page_config(page_title="Megamagica", page_icon=":crystal_ball:")
 
 # Define a function to find the maximum of three numbers
 def find_maximum(num1, num2, num3):
     return max(num1, num2, num3)
 
 # Define the title and introduction text
-st.title("Welcome to the Megamagicia")
+st.title("Welcome to the Megamagica")
 st.subheader("🧙‍♀️ What do you seek to find, my dear?")
 st.write("I know you seek the greatest of all?  **Haha!**  Fear not,  simply provide me with three numbers and I shall reveal the future")
 
