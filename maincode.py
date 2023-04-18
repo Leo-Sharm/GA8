@@ -40,9 +40,9 @@ if st.button("Cast Spell :crystal_ball:"):
 
         
     # Display the answer and maximum value
-    #st.write(f"The spirits have revealed that the greatest number is **{answer}**.")
+    st.write(f"Yes spirits, oh.. **{answer}**!!🔮🧙‍♀️✨")
     #st.write("<h1 style='text-align:center; color:#008080;'>The largest number is:</h1>", unsafe_allow_html=True)
-    st.markdown("<h2 style='text-align:left; color:#008080;'></h2>".format(answers), unsafe_allow_html=True)
+    
     # display the largest number in a big font size
     st.markdown("<h1 style='text-align:center; color:#008080;'>The spirits have revealed that the greatest of all is :</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:center; color:#008080; font-size: 96px;'>{}</h1>".format(maximum), unsafe_allow_html=True)
