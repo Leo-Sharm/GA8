@@ -14,9 +14,9 @@ st.subheader("Ask a question and I'll give you an answer")
 st.write("Enter three numbers to find the maximum value. The maximum value will determine the answer to your question.")
 
 # Define the input fields for the three numbers
-num1 = st.number_input("Enter the first number (between -100 and 100):", value=0.0, step=None, format='%f', key='num1', min_value=-100, max_value=100)
-num2 = st.number_input("Enter the second number (between -100 and 100):", value=0.0, step=None, format='%f', key='num2', min_value=-100, max_value=100)
-num3 = st.number_input("Enter the third number (between -100 and 100):", value=0.0, step=None, format='%f', key='num3', min_value=-100, max_value=100)
+num1 = st.number_input("Enter the first number :", value=0.0, step=None, format='%f', key='num1')
+num2 = st.number_input("Enter the second number :", value=0.0, step=None, format='%f', key='num2')
+num3 = st.number_input("Enter the third number :", value=0.0, step=None, format='%f', key='num3')
 
 # Define a button to trigger the maximum calculation
 if st.button("Cast Spell"):
